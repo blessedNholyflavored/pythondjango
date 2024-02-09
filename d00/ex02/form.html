@@ -1,0 +1,43 @@
+<!doctype html>
+<head>
+<script src="./popup.js"></script>
+</head>
+<body>
+<h2>ex02 : form.html</h2>
+
+<form action="#">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="firstname"  value="c quoi ton blaze"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="name"  value="c quoi ton blaze de famille"><br>
+  <label for="quantity">Age:</label><br>
+  <input type="number" id="age" ><br>
+  <label for="quantity">Phone:</label><br>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"  /><br>
+  <label for="quantity">Email:</label><br>
+  <input type="email" id="email" name="email">
+    <legend>Are you a 42 student?</legend>
+      <input type="checkbox" id="student"/>
+
+    <legend>whats ur gender?</legend>
+  
+    <div>
+      <input type="radio" id="gender_male" value="male" checked />
+      <label id="gender_male">Male</label>
+    </div>
+  
+    <div>
+      <input type="radio"id="gender_female" value="female"  />
+      <label id="gender_female">Female</label>
+    </div>
+  
+    <div>
+      <input type="radio" id="gender_other" value="other" />
+      <label id="gender_other" >Other</label>
+    </div>
+
+  <br>
+  <input type="submit" onclick="displayFormContents();">
+</form> 
+</body>
+</html>
