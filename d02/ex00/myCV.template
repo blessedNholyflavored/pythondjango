@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>cv de lucie </title>
+  </head>
+  <body>
+  <h1> Welcome to my cv<h1>
+<table>
+<ul>
+<h3>nom</h3>
+ <li>{nom}</li>
+<h3>prenom</h3>
+ <li>{prenom}</li>
+<h3>age</h3>
+ <li>{age}</li>
+<h3>hobby</h3>
+ <li>{passion}</li>
+</ul>
+</table>
+
+
+</body>
+</html>
