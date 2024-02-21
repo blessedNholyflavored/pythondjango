@@ -14,10 +14,10 @@ class CoffeeMachine:
 
         def description(self) -> str:
             return "An empty cup?! Gimme my money back!"
-    
-class BrokenMachineException(Exception):
-        def __init__(self) -> None:
-            super().__init__("This coffee machine has to be repaired.")
+        
+    class BrokenMachineException(Exception):
+                def __init__(self) -> None:
+                    super().__init__("This coffee machine has to be repaired.")
 
         def __init__(self) -> None:
             self.count = 10
@@ -25,17 +25,26 @@ class BrokenMachineException(Exception):
         def repair(self) -> None:
             self.count = 10 
 
-
-
-def serve(self, beverage=HotBeverage) -> HotBeverage():
-    if (self.count <= 10):
-         raise CoffeeMachine.BrokenMachineException
-    self.count -= 1
-    if random.random(0, 5) == 0:
-        # start stop
-        return CoffeeMachine.EmptyCup()
-    return beverage()
+    def serve(self, beverage=HotBeverage) -> HotBeverage():
+        if (self.count <= 10):
+            raise CoffeeMachine.BrokenMachineException
+        self.count -= 1
+        if random.random(0, 5) == 0:
+            # start stop
+            return CoffeeMachine.EmptyCup()
+        return beverage()
 
 def test():
     machine = CoffeeMachine()
-    
+    for _ in range(100):
+        try:
+            print(machine.serve(random.choice(
+                [Coffee, Tea, Cappuccino, Chocolate])))
+        except CoffeeMachine.BrokenMachineException as e:
+            print(e)
+        machine.repair()
+
+
+if __name__ == '__main__':
+    test()
+   
